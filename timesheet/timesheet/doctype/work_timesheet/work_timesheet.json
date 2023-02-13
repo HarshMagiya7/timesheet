@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TS-{start_date}-{end_date}",
+ "creation": "2023-02-10 15:46:35.275744",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "column_break_2",
+  "employee_manager",
+  "manager_mail",
+  "timesheet_section",
+  "start_date",
+  "column_break_6",
+  "end_date",
+  "section_break_8",
+  "timesheet",
+  "section_break_10",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timesheet_section",
+   "fieldtype": "Section Break",
+   "label": "Timesheet"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "timesheet",
+   "fieldtype": "Table",
+   "label": "Timesheet",
+   "options": "Timesheet week"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text",
+   "label": "Comments"
+  },
+  {
+   "fetch_from": "employee.reports_to",
+   "fieldname": "employee_manager",
+   "fieldtype": "Link",
+   "label": "Employee Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_manager.user_id",
+   "fieldname": "manager_mail",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Manager mail",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-13 15:40:48.601436",
+ "modified_by": "Administrator",
+ "module": "Timesheet",
+ "name": "Work Timesheet",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -55,10 +55,10 @@ app_license = "MIT"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-#	"methods": "timesheet.utils.jinja_methods",
+jinja = {
+	"methods": "timesheet.jinja.method"
 #	"filters": "timesheet.utils.jinja_filters"
-# }
+}
 
 # Installation
 # ------------

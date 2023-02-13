@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-02-10 15:52:55.069127",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_type",
+  "mon",
+  "tue",
+  "wed",
+  "thus",
+  "fri",
+  "sat",
+  "sun"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Type"
+  },
+  {
+   "columns": 1,
+   "fieldname": "mon",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Mon"
+  },
+  {
+   "columns": 1,
+   "fieldname": "tue",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Tue"
+  },
+  {
+   "columns": 1,
+   "fieldname": "wed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Wed"
+  },
+  {
+   "columns": 1,
+   "fieldname": "thus",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Thus"
+  },
+  {
+   "columns": 1,
+   "fieldname": "fri",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Fri"
+  },
+  {
+   "columns": 1,
+   "fieldname": "sat",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Sat"
+  },
+  {
+   "columns": 1,
+   "fieldname": "sun",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Sun"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-02-10 23:33:15.579721",
+ "modified_by": "Administrator",
+ "module": "Timesheet",
+ "name": "Timesheet week",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
