@@ -7,6 +7,7 @@ from datetime import datetime
 class WorkTimesheet(Document):
 	def validate(self):
 		self.check_date()
+
 		self.calculate_total_hours()
 
 	def check_date(self):
@@ -25,6 +26,8 @@ class WorkTimesheet(Document):
 		for i in self.timesheet:
 			week = [i.mon,i.tue,i.wed, i.thus, i.fri, i.sat, i.sun]
 			for j in week:
+				if j != None and j < 0:
+					frappe.throw('Working hours cannot be negative')
 				if j != None:
 					hours += j
 		self.total_working_hours = hours
