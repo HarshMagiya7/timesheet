@@ -131,7 +131,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-14 23:06:20.065095",
+ "modified": "2023-02-17 00:11:55.223366",
  "modified_by": "Administrator",
  "module": "Timesheet",
  "name": "Work Timesheet",
@@ -149,10 +149,20 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "select": 1,
+   "submit": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
