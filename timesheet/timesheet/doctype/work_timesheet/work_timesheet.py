@@ -7,9 +7,8 @@ from datetime import datetime
 class WorkTimesheet(Document):
 	def validate(self):
 		self.check_date()
-
 		self.calculate_total_hours()
-
+		self.get_manager()
 	def check_date(self):
 #		print(self.start_date)
 #		print(type(self.start_date))
@@ -31,3 +30,16 @@ class WorkTimesheet(Document):
 				if j != None:
 					hours += j
 		self.total_working_hours = hours
+
+	def get_manager(self):
+		if self.employee_manager:
+			return
+		try:
+			manager_employee = frappe.db.get_value('Employee',self.employee,'reports_to')
+			manager_user = frappe.db.get_value('Employee',manager_employee,'user_id')
+			self.employee_manager = manager_user
+		except:
+			frappe.throw(f'Please set Reporting Manager(Reports to) for the Employee: {self.employee}')
+
+	def on_submit(self):
+		frappe.msgprint(f'Your timesheet has been sent to {self.employee_manager} for approval')

@@ -8,12 +8,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "employee_name",
   "employee",
   "column_break_2",
-  "manager",
+  "employee_name",
   "employee_manager",
-  "manager_link",
   "timesheet_section",
   "start_date",
   "column_break_6",
@@ -81,34 +79,10 @@
    "label": "Comments"
   },
   {
-   "fetch_from": "manager.employee_name",
-   "fieldname": "employee_manager",
-   "fieldtype": "Data",
-   "label": "Employee Manager",
-   "read_only": 1
-  },
-  {
    "fieldname": "total_working_hours",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Total working hours",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "employee.reports_to",
-   "fieldname": "manager",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Manager ID",
-   "options": "Employee",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "manager.user_id",
-   "fieldname": "manager_link",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Manager Link",
-   "options": "User",
    "read_only": 1
   },
   {
@@ -124,14 +98,21 @@
    "fetch_from": "employee.employee_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee_manager",
+   "fieldtype": "Link",
    "hidden": 1,
-   "label": "Employee Name"
+   "label": "Employee Manager",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-17 00:11:55.223366",
+ "modified": "2023-02-17 16:56:06.541423",
  "modified_by": "Administrator",
  "module": "Timesheet",
  "name": "Work Timesheet",
@@ -151,14 +132,12 @@
    "write": 1
   },
   {
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "read": 1,
    "report": 1,
    "role": "Employee",
    "select": 1,
-   "submit": 1,
    "write": 1
   }
  ],
