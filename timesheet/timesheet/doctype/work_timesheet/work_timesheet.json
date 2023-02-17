@@ -12,6 +12,7 @@
   "column_break_2",
   "employee_name",
   "employee_manager",
+  "manager_name",
   "timesheet_section",
   "start_date",
   "column_break_6",
@@ -107,12 +108,18 @@
    "hidden": 1,
    "label": "Employee Manager",
    "options": "User"
+  },
+  {
+   "fieldname": "manager_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Manager Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-17 16:56:06.541423",
+ "modified": "2023-02-17 19:43:19.373011",
  "modified_by": "Administrator",
  "module": "Timesheet",
  "name": "Work Timesheet",

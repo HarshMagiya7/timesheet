@@ -38,8 +38,11 @@ class WorkTimesheet(Document):
 			manager_employee = frappe.db.get_value('Employee',self.employee,'reports_to')
 			manager_user = frappe.db.get_value('Employee',manager_employee,'user_id')
 			self.employee_manager = manager_user
+
+			manager_name = frappe.db.get_list('User',filters={'name': manager_user},fields=['full_name'],pluck = 'full_name')
+			self.manager_name = manager_name[0]
 		except:
 			frappe.throw(f'Please set Reporting Manager(Reports to) for the Employee: {self.employee}')
 
 	def on_submit(self):
-		frappe.msgprint(f'Your timesheet has been sent to {self.employee_manager} for approval')
+		frappe.msgprint(f'Your timesheet has been sent to {self.manager_name} for approval')
